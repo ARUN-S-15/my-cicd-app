@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3001;
 
 app.get('/', (req, res) => {
-  res.send('Hello from CI/CD pipeline! Deployed automatically 🚀');
+  res.send('Hello World');
 });
 
 app.listen(PORT, () => console.log(`Running on port ${PORT}`));
