@@ -2,18 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>To-Do List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SomeThing — Modern Essentials</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>My To-Do List</h1>
-    <form id="todoForm">
-      <input type="text" id="todoInput" placeholder="Add a new task..." autocomplete="off" required>
-      <button type="submit">Add</button>
-    </form>
-    <ul id="todoList"></ul>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">SomeThing</div>
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
   </div>
-  <script src="app.js"></script>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">New Season</p>
+    <h1>Everyday objects, <br>elevated.</h1>
+    <p class="hero-sub">Thoughtfully designed essentials for a calmer life.</p>
+    <a href="#shop" class="btn-primary">Shop the collection</a>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <h2>Featured Products</h2>
+
+  <div class="shop-controls">
+    <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+    <div class="filter-pills" id="filterPills"></div>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+  <p class="no-results" id="noResults" style="display:none;">No products match your search.</p>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2>Made with intention</h2>
+    <p>Every piece in our collection is chosen for its quality, simplicity, and lasting value. No clutter, no noise — just objects that earn their place in your life.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 SomeThing. All rights reserved.</p>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button id="closeCart" class="close-btn">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="btn-primary btn-checkout" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
 </body>
 </html>

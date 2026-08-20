@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — SomeThing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">SomeThing</a>
+    <nav class="nav-links">
+      <a href="/">Back to shop</a>
+    </nav>
+    <div></div>
+  </div>
+</header>
+
+<section class="checkout-page">
+  <div class="checkout-inner" id="checkoutInner">
+
+    <div class="checkout-form-side">
+      <h2>Checkout</h2>
+
+      <form id="paymentForm">
+        <label>Full Name</label>
+        <input type="text" placeholder="Jane Doe" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="jane@example.com" required>
+
+        <label>Shipping Address</label>
+        <input type="text" placeholder="123 Main Street, City, ZIP" required>
+
+        <h3 class="section-title">Payment Details <span class="dummy-tag">Demo only — no real payment</span></h3>
+
+        <label>Card Number</label>
+        <input type="text" placeholder="4242 4242 4242 4242" maxlength="19" id="cardNumber" required>
+
+        <div class="form-row">
+          <div>
+            <label>Expiry</label>
+            <input type="text" placeholder="MM/YY" maxlength="5" id="expiry" required>
+          </div>
+          <div>
+            <label>CVV</label>
+            <input type="text" placeholder="123" maxlength="3" id="cvv" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-checkout">Place Order</button>
+      </form>
+    </div>
+
+    <div class="checkout-summary-side">
+      <h3>Order Summary</h3>
+      <div id="summaryItems"></div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="summarySubtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>Free</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="summaryTotal">$0.00</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="order-success" id="orderSuccess" style="display:none;">
+    <div class="success-icon">✓</div>
+    <h2>Order placed!</h2>
+    <p>Thank you for shopping with SomeThing. A confirmation has been sent to your email (not really — this is a demo).</p>
+    <a href="/" class="btn-primary">Continue Shopping</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 SomeThing. All rights reserved.</p>
+</footer>
+
+<script src="checkout.js"></script>
+</body>
+</html>
